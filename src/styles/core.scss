@@ -1,5 +1,6 @@
 @import 'base';
 @import '~normalize.css/normalize';
+@import url(//fonts.googleapis.com/earlyaccess/opensanshebrew.css);
 
 // Some best-practice CSS that's useful for most apps
 // Just remove them if they're not what you want
@@ -12,10 +13,18 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-family: 'Open Sans Hebrew', sans-serif;
 }
 
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 300;
+  margin-bottom:45px;
+  margin-top:30px;
 }
