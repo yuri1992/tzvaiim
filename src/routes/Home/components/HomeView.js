@@ -267,7 +267,7 @@ class HomeView extends React.Component {
             <br/>
             <ul className="contact-list">
               <li className="icon-phone">חייגו אלינו: <a href="tel:052-8842306">052-8842306</a></li>
-              <li className="icon-email">דוא"ל: 123123@asdada.com</li>
+              <li className="icon-email"> דוא"ל:<a href="mailto:amitmanirr@gmail.com">amitmanirr@gmail.com</a> </li>
               <li className="icon-face"><a href="https://www.facebook.com/mishakeihakef/">פייסבוק</a></li>
             </ul>
           </div>
