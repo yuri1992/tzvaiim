@@ -59,24 +59,18 @@ class HomeView extends React.Component {
       <StickyForm />
       <section className="c-intro">
         <div className="c-intro-logo">
-          <p className="c-intro-logo-text">
+          <h1 className="c-intro-logo-text">
             משחקי הכיף
-          </p>
-          <p className="c-intro-logo-subtext">
+          </h1>
+          <h2 className="c-intro-logo-subtext">
             שולחנות משחק ומשחקי מולטימדיה לאירועים
-          </p>
+          </h2>
           <p className="c-intro-phone">
             052-8842306
           </p>
         </div>
       </section>
-      <Waypoint onEnter={() => {
-        console.log('asdasda');
-      }}
-                onLeave={() => {
-                  console.log('asdasda2');
-                }}/>
-
+      <Waypoint />
       <section className="container-fluid text-center c-about-us fixed">
         <div className="row" style={{ width: '100%' }}>
           <div className="col-xs-12">
@@ -104,10 +98,6 @@ class HomeView extends React.Component {
               <li>
                 <h3>משחקי שולחן</h3>
                 <img src={IconTable}/>
-              </li>
-              <li>
-                <h3>טרמפולינות ומתנפחים</h3>
-                <img src={IconJumping}/>
               </li>
             </ul>
           </div>
