@@ -63,7 +63,7 @@ class HomeView extends React.Component {
             משחקי הכיף
           </h1>
           <h2 className="c-intro-logo-subtext">
-            שולחנות משחק ומשחקי מולטימדיה לאירועים
+            שולחנות משחק ועמדות מולטימדיה לאירועים
           </h2>
           <p className="c-intro-phone">
             052-8842306
@@ -92,7 +92,7 @@ class HomeView extends React.Component {
             </p>
             <ul className="list-inline">
               <li>
-                <h3>משחקי מולטימדיה</h3>
+                <h3>עמדות מולטימדיה</h3>
                 <img src={IconMultimedia}/>
               </li>
               <li>
@@ -108,7 +108,7 @@ class HomeView extends React.Component {
           <h1>גלריות מאירועים</h1>
           <Lightbox
             theme={{ container: { background: 'rgba(0, 0, 0, 0.85)' } }}
-            images={PHOTO_SET}
+            images={PHOTO_SET.map((i) => ({src:i.lightboxImage.src}))}
             backdropClosesModal={true}
             onClose={this.closeLightbox}
             onClickPrev={this.gotoPrevious}
