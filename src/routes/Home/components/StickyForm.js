@@ -21,12 +21,8 @@ class StickyForm extends React.Component {
   renderClosed() {
     return <div className="sticky sticky-close">
       <h4>
-        מבצע לזמן מוגבל!
+        מעוניינים לשמוע עוד ?
       </h4>
-      <p>
-        חבילת הכל כלול רק ב1650 ש"ח
-      </p>
-
       <a onClick={this.onClickForDetails}>
         לפרטים נוספים
       </a>
@@ -37,7 +33,7 @@ class StickyForm extends React.Component {
     return <div className="sticky sticky-open">
       <span className="close" onClick={this.onClickForDetails}>X</span>
       <div className="image">
-        <h2>חבילת הכל כלול רק ב1650 ש"ח</h2>
+        <h2>חבילת הכל כלול רק ב1850 ש"ח</h2>
         <ul className="list text-right">
           <li className="bullet">3 עמדות מולטימדיה עם 100 משחקים</li>
           <li className="bullet">שולחן הוקי אוויר</li>

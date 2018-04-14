@@ -4,55 +4,56 @@ body {
 
 .c-intro {
   width: 100%;
-  background: url('assets/bg.png');
+  background: #41210c;
   min-height: 100vh;
   position: relative;
 }
 
 .c-intro-logo {
-  background: url('assets/logo.png') no-repeat center;
-  background-size: 90%;
   height: 300px;
   width: 100%;
-  max-width: 695px;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: auto;
-  padding-top: 90px;
-  padding-right: 70px;
   text-align: center;
   color: #fff;
 }
 
 .c-intro-logo-text {
-  font-size: 72px;
-  margin:10px 0 40px 0;
-  font-weight: 500;
-
+  color: #fff;
+  font-size: 12em;
+  font-weight: bold;
+  margin: 10px 0 40px 0;
 }
 
-
 .c-intro-logo-subtext {
-  font-size: 30px;
+  font-size: 6em;
+  color: #aec720;
+  font-weight: 600;
 }
 
 .c-intro-phone {
-  font-size: 35px;
+  font-size: 3em;
   font-weight: 600;
 }
 
 .c-about-us {
   //background: #f6f5fa;
   background: #edf5ed;
-  font-size: 16px;
+  font-size: 1.2em;
   direction: rtl;
 }
 
 .c-contact-us {
   background: #f6f5fa;
+  &.fixed {
+    min-height: 700px;
+    max-height: 900px;
+  }
+
 }
 
 .c-recommendation {
@@ -62,6 +63,24 @@ body {
     height: 1000px;
   }
 
+}
+
+li.banner {
+  margin-top: 20px;
+  margin-left: 15px;
+  color: #fff;
+  font-size: 2.5em;
+  padding: 20px;
+  font-weight: bold;
+  &.banner-red {
+    background: #f26334;
+  }
+  &.banner-blue {
+    background: #2994e3;
+  }
+  &.banner-green {
+    background: #b2d238;
+  }
 }
 
 .c-gallery {

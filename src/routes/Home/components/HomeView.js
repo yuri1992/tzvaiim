@@ -1,103 +1,102 @@
-import React from 'react';
-import Gallery from 'react-photo-gallery';
-import Waypoint from 'react-waypoint';
-import Lightbox from 'react-images';
-import StickyForm from './StickyForm';
-import './HomeView.scss';
+import React from 'react'
+import Gallery from 'react-photo-gallery'
+import Waypoint from 'react-waypoint'
+import Lightbox from 'react-images'
+import StickyForm from './StickyForm'
+import './HomeView.scss'
 
-import IconJumping from './assets/icons/icon_jumping.png';
-import IconMultimedia from './assets/icons/icon_multimedia.png';
-import IconTable from './assets/icons/icon_table.png';
-import ContactForm from './ContactForm';
-import { PHOTO_SET } from './Photos';
+import IconJumping from './assets/icons/icon_jumping.png'
+import IconMultimedia from './assets/icons/icon_multimedia.png'
+import IconTable from './assets/icons/icon_table.png'
+import ContactForm from './ContactForm'
+import { PHOTO_SET } from './Photos'
 
 class HomeView extends React.Component {
 
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
       totalPages: 1,
       lightboxIsOpen: false,
-      currentImage: 0,
-    };
+      currentImage: 0
+    }
 
-    this.closeLightbox = this.closeLightbox.bind(this);
-    this.openLightbox = this.openLightbox.bind(this);
-    this.gotoNext = this.gotoNext.bind(this);
-    this.gotoPrevious = this.gotoPrevious.bind(this);
+    this.closeLightbox = this.closeLightbox.bind(this)
+    this.openLightbox = this.openLightbox.bind(this)
+    this.gotoNext = this.gotoNext.bind(this)
+    this.gotoPrevious = this.gotoPrevious.bind(this)
 
   }
 
-  openLightbox(index, event) {
+  openLightbox (index, event) {
     this.setState({
       currentImage: index,
-      lightboxIsOpen: true,
-    });
+      lightboxIsOpen: true
+    })
   }
 
-  closeLightbox() {
+  closeLightbox () {
     this.setState({
       currentImage: 0,
-      lightboxIsOpen: false,
-    });
+      lightboxIsOpen: false
+    })
   }
 
-  gotoPrevious() {
+  gotoPrevious () {
     this.setState({
-      currentImage: this.state.currentImage - 1,
-    });
+      currentImage: this.state.currentImage - 1
+    })
   }
 
-  gotoNext() {
+  gotoNext () {
     this.setState({
-      currentImage: this.state.currentImage + 1,
-    });
+      currentImage: this.state.currentImage + 1
+    })
   }
 
-  render() {
+  render () {
     return <div>
-      <StickyForm />
+      <StickyForm/>
       <section className="c-intro">
         <div className="c-intro-logo">
           <h1 className="c-intro-logo-text">
-            משחקי הכיף
+            צבעים בפארק
           </h1>
           <h2 className="c-intro-logo-subtext">
-            שולחנות משחק ועמדות מולטימדיה לאירועים
+            בית קפה חברתי מבית שירת הפארק
           </h2>
           <p className="c-intro-phone">
-            052-8842306
+            כשר חלבי | 097717485
           </p>
         </div>
       </section>
-      <Waypoint />
+      <Waypoint/>
       <section className="container-fluid text-center c-about-us fixed">
-        <div className="row" style={{ width: '100%' }}>
+        <div className="row" style={{width: '100%'}}>
           <div className="col-xs-12">
-            <h1> משחקי הכיף - שולחנות משחק ומולטימדיה לאירועים וימי הולדת</h1>
-            <p >
-              לכל אירוע- בר מצווה, בת מצווה, ימי הולדת ועוד..
-              משחקי הכיף יהוו את מרכזו ולב ליבו של האירוע.
-
-              סוללת המשחקים שיש לנו להציע מכילות בתוכן שולחנות משחק מהמתקדמים
-              שיש:
-              הוקי אוויר,
-              כדורסל זוגי חוזר,
-              ביליארד,
-              שולחן כדורגל
-              וקונסולות משחקי וידאו מהחדישים ביותר.
+            <h1>צבעים בפארק - בית קפה ואירועים בטעם אחר בפארק בכפר סבא</h1>
+            <p>
+              בפארק כפר סבא הפסטורלי והירוק נמצאת מסעדת צבעים בפארק, בית קפה לאירועים קטנים מבית שירת הפארק, מעניק לכם אווירה מושלמת לאירועים קטנים במסעדה, עם תפריט כשר חלבי, עד 100 אורחים.
+            <br/>
+              תפריט האירועים בניצוחו של השף משה מנור כולל דגים טריים במגוון צורות בישול, פסטות ומנות יצירתיות מהמטבח האיטלקי, קינוחים מרהיבים ועוד.
+            <br/>
+              צוות האירועים עם רזומה של שנים רבות בתחום האירועים הינו קשוב, חם, ומקצועי מאוד.
+            <br/>
+              כאן תחגגו אירועי בראנץ מושלמים באוויר הפתוח עם ציוצי הציפורים או אירועי ערב עם מפות לבנות, יין משובח, טעמים נדירים, ואווירה שלווה ומרגשת.
               <br/>
-              המשחקים שלנו מספקים חווית משחק יוצאת דופן המבטיחה הנאה צרופה
-              לילדים ולבוגרים כאחד...
+              לפרטים נוספים התקשרו : 097717485
             </p>
             <ul className="list-inline">
-              <li>
-                <h3>עמדות מולטימדיה</h3>
-                <img src={IconMultimedia}/>
+              <li className="banner banner-green">
+                כשר חלבי
               </li>
-              <li>
-                <h3>משחקי שולחן</h3>
-                <img src={IconTable}/>
+
+              <li className="banner banner-red">
+              אירועים עד 100 איש
+              </li>
+
+              <li className="banner banner-blue">
+                תפריט עשיר
               </li>
             </ul>
           </div>
@@ -107,8 +106,8 @@ class HomeView extends React.Component {
         <div>
           <h1>גלריות מאירועים</h1>
           <Lightbox
-            theme={{ container: { background: 'rgba(0, 0, 0, 0.85)' } }}
-            images={PHOTO_SET.map((i) => ({src:i.lightboxImage.src}))}
+            theme={{container: {background: 'rgba(0, 0, 0, 0.85)'}}}
+            images={PHOTO_SET.map((i) => ({src: i.lightboxImage.src}))}
             backdropClosesModal={true}
             onClose={this.closeLightbox}
             onClickPrev={this.gotoPrevious}
@@ -127,38 +126,38 @@ class HomeView extends React.Component {
           <h1>המלצות עלינו</h1>
           <div className="row">
             <div className="col-xs-6">
-              <iframe
-                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fyaniv.gibert%2Fposts%2F10154968441769362%3A0&width=500"
-                width="500" height="335"
-                style={{ border: 'none', overflow: 'hidden' }} scrolling="no"
-                frameBorder="0"
-                allowTransparency="true"/>
+             <iframe
+               src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fshamir.mor%2Fposts%2F10156119438183516%3A0&width=500"
+               width="500" height="375"
+               style={{border: 'none', overflow: 'hidden'}} scrolling="no"
+               frameBorder="0"
+               allowTransparency="true"
+               allow="encrypted-media"/>
             </div>
             <div className="col-xs-6">
               <iframe
-                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsharonadabush%2Fposts%2F10207041185148208%3A0&width=500"
-                width="500" height="369"
-                style={{ border: 'none', overflow: 'hidden' }} scrolling="no"
+                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fstephietaylor%2Fposts%2F10156353186729575%3A0&width=500"
+                width="500" height="375"
+                style={{border: 'none', overflow: 'hidden'}} scrolling="no"
                 frameBorder="0"
-                allowTransparency="true"/>
-            </div>
-
-            <div className="col-xs-6">
-              <iframe
-                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ftamar.benisty%2Fposts%2F10154687984239419%3A0&width=500"
-                width="500" height="316"
-                style={{ border: 'none', overflow: 'hidden' }} scrolling="no"
-                frameBorder="0"
-                allowTransparency="true"/>
+                allowTransparency="true" allow="encrypted-media"/>
             </div>
             <div className="col-xs-6">
-
               <iframe
-                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fben.perry.5070%2Fposts%2F10154613585692808%3A0&width=500"
-                width="500" height="335"
-                style={{ border: 'none', overflow: 'hidden' }} scrolling="no"
+                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fadielazari%2Fposts%2F10159701579305526%3A0&width=500"
+                width="500" height="375"
+                style={{border: 'none', overflow: 'hidden'}} scrolling="no"
                 frameBorder="0"
-                allowTransparency="true"/>
+                allowTransparency="true" allow="encrypted-media"/>
+            </div>
+            <div className="col-xs-6">
+              <iframe
+                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D1569347953124897%26id%3D100001491217392%26substory_index%3D0&width=500"
+                width="500" height="375"
+                style={{border: 'none', overflow: 'hidden'}} scrolling="no"
+                frameBorder="0"
+                allowTransparency="true"
+                allow="encrypted-media"/>
             </div>
           </div>
         </div>
@@ -166,25 +165,34 @@ class HomeView extends React.Component {
       <section className="container-fluid text-center fixed c-contact-us">
         <div className="container contact-form">
           <h1>צור קשר</h1>
+
           <div className="col-sm-6 col-xs-12">
             <ContactForm/>
           </div>
           <div className="col-sm-6 col-xs-12 contact-info">
-            צוות משחקי הכיף מגיע לכל מקום בארץ, נשמח לעמוד לרשותכם בכל זמן שתרצו
+            צבעים בפארק בית קפה לאירועים קטנים מבית שירת הפארק, מעניק לכם אווירה מושלמת לאירועים קטנים במסעדה, עם תפריט כשר חלבי, עד 80 אורחים.
+            <br/>
+            תפריט האירועים בניצוחו של השף משה מנור כולל דגים טריים במגוון צורות בישול, פסטות ומנות יצירתיות מהמטבח האיטלקי, קינוחים מרהיבים ועוד.
             <br/>
             <ul className="contact-list">
-              <li className="icon-phone">חייגו אלינו: <a href="tel:052-8842306">052-8842306</a>
+              <li className="icon-phone">חייגו אלינו: <a href="tel:097717485">097717485</a>
               </li>
               <li className="icon-email"> דוא"ל:<a
                 href="mailto:amitmanirr@gmail.com">amitmanirr@gmail.com</a></li>
               <li className="icon-face"><a
-                href="https://www.facebook.com/mishakeihakef/">פייסבוק</a></li>
+                href="https://www.facebook.com/%D7%A6%D7%91%D7%A2%D7%99%D7%9D-%D7%91%D7%A4%D7%90%D7%A8%D7%A7-1645849635717807/">פייסבוק</a></li>
             </ul>
+          </div>
+
+          <div className="col-xs-12">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4639.541798303267!2d34.922659533653935!3d32.18315635287531!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2f752f52bf03c98a!2z16bXkdei15nXnSDXkdek15DXqNenLSDXpNeQ16jXpyDXm9ek16gg16HXkdeQ!5e0!3m2!1sen!2sil!4v1523699475205"
+               height="450" frameBorder="0" style={{width: '100%', border: 0}} allowFullScreen/>
           </div>
         </div>
       </section>
-    </div>;
+    </div>
   }
 }
 
-export default HomeView;
+export default HomeView
